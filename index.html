@@ -1,101 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abdullah Talha | Portfolio</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device‑width, initial‑scale=1.0"/>
+  <title>Abdullah Talha – Minimalist Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- AOS scroll animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Back to Top Button -->
-  <a href="#" class="back-to-top" title="Back to Top">⬆</a>
-
-  <!-- Hero Section -->
+  <a href="#" class="back-to-top">⬆</a>
   <header class="hero" data-aos="fade-down">
-    <div class="shape-overlay"></div>
     <img src="assets/abdullah.jpg" alt="Abdullah Talha">
-    <div class="hero-text">
-      <h1>Abdullah Talha</h1>
-      <p class="typing subtitle"><span id="typed"></span></p>
-      <a href="Abdullah Resume.pdf" class="resume-btn" download>Download Resume</a>
-    </div>
+    <h1>Abdullah Talha</h1>
+    <p class="subtitle"><span id="typed"></span></p>
+    <a href="Abdullah Resume.pdf" class="resume-btn" download>Download Résumé</a>
   </header>
 
-  <!-- About -->
   <section class="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>
-      I’m Abdullah Talha — a Software Engineer and Full Stack Developer skilled in Flutter, Firebase, and modern UI/UX. I create functional, cross-platform applications with clean code and responsive design. From mobile apps to full-stack web solutions, I build digital experiences that are intuitive, scalable, and visually elegant.
-    </p>
+    <p>I am a Software Engineer and Full Stack Developer with expertise in Flutter, Firebase, and UI/UX design. I deliver clean, responsive, and scalable digital solutions.</p>
   </section>
 
-  <!-- Education -->
   <section class="education" data-aos="fade-right">
     <h2>Education</h2>
     <ul>
       <li><strong>BS Software Engineering</strong> (2021–2025) — AUST</li>
-      <li><strong>FSc Pre-Medical</strong> (2016–2018) — Army Burn Hall College</li>
-      <li><strong>Matriculation (Science)</strong> (2014–2016) — Army Burn Hall College</li>
+      <li><strong>FSc Pre‑Medical</strong> (2016–2018)</li>
+      <li><strong>Matric (Science)</strong> (2014–2016)</li>
     </ul>
   </section>
 
-  <!-- Skills -->
   <section class="skills" data-aos="zoom-in">
     <h2>Skills</h2>
     <div class="skill-tags">
-      <span>Flutter</span><span>Dart</span><span>Firebase</span><span>Node.js</span>
-      <span>Office 365</span><span>Photoshop</span><span>UI/UX</span><span>Git</span>
-      <span>HTML</span><span>CSS</span><span>Responsive Design</span>
+      <span>Flutter</span><span>Dart</span><span>Firebase</span><span>Photoshop</span><span>Office 365</span>
+      <span>UI/UX</span><span>HTML</span><span>CSS</span><span>Git</span>
     </div>
   </section>
 
-  <!-- Projects -->
   <section class="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card" data-aos="fade-up">
+      <div class="project-card" data-aos="fade-right">
         <img src="assets/wanderwise.jpg" alt="WanderWise">
         <h3>WanderWise</h3>
-        <p>Travel app with offline itinerary, hotel/flight booking, and map integration. Built with Flutter & Firebase.</p>
+        <p>Flutter travel app with booking, offline itinerary, and maps.</p>
       </div>
-      <div class="project-card" data-aos="fade-up">
+      <div class="project-card" data-aos="fade-left">
         <img src="assets/soulverse.jpg" alt="SoulVerse">
         <h3>SoulVerse</h3>
-        <p>Islamic mood-based app with Quranic guidance, audio, and multi-language support. UI/UX focused Flutter build.</p>
+        <p>Islamic app including mood content, audio, and multilingual UI/UX.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="contact" data-aos="fade-up">
     <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
-    <p><strong>Phone:</strong> 0345-9625775</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">linkedin.com/in/abdullahtalha22</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/abdullahtalha22" target="_blank">github.com/abdullahtalha22</a></p>
+    <p><a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a> | 0345‑9625775</p>
+    <p><a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a> • <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a></p>
   </section>
 
-  <!-- Footer -->
-  <footer data-aos="fade-up">
-    <p>© 2025 Abdullah Talha. Built with passion and Flutter vibes.</p>
-  </footer>
+  <footer data-aos="fade-up"><p>© 2025 Abdullah Talha</p></footer>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
-
-    new Typed("#typed", {
-      strings: ["Flutter Developer", "Full Stack Engineer", "UI/UX Designer", "Problem Solver"],
-      typeSpeed: 60,
-      backSpeed: 30,
-      loop: true
-    });
+    AOS.init({ duration: 800, once: true });
+    new Typed("#typed", { strings:["Flutter Developer","UI/UX Designer","Full Stack Developer"], typeSpeed:60, backSpeed:30, loop:true });
   </script>
-
 </body>
 </html>
