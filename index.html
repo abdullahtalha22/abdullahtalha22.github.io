@@ -7,84 +7,57 @@
   <link rel="stylesheet" href="style.css">
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- Typing Animation -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.css">
 </head>
 <body>
 
-  <!-- Back to Top Button -->
+  <!-- Back to Top -->
   <a href="#" class="back-to-top" title="Back to Top">⬆</a>
 
   <header class="hero" data-aos="fade-down">
     <img src="assets/abdullah.jpg" alt="Abdullah Talha">
     <div class="hero-text">
       <h1>Abdullah Talha</h1>
-      <p class="typing subtitle">
-        <span id="typed"></span>
-      </p>
+      <p class="subtitle"><span id="typed"></span></p>
       <a href="Abdullah Resume.pdf" class="resume-btn" download>Download Resume</a>
     </div>
   </header>
 
   <section class="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>
-      I’m Abdullah Talha — a Software Engineer and passionate Full Stack Developer specializing in cross-platform mobile app development using Flutter and Firebase. With a strong foundation in software engineering and user-centered design, I create responsive, scalable, and intuitive applications that provide real-world impact.
-    </p>
-    <p>
-      My development style blends modern technology with clean UI/UX principles. I’m particularly skilled in building multilingual apps, handling backend integration, and ensuring exceptional user experiences across Android and iOS platforms. My portfolio includes spiritual, productivity, and travel-based applications — all designed with accessibility and performance in mind.
-    </p>
-    <p>
-      In addition to development, I bring a creative edge through my experience in Adobe Photoshop and graphic design. I’m also well-versed in Office 365 tools, which supports my ability to manage documentation, reporting, and collaboration in team environments.
-    </p>
-    <p>
-      I’m always eager to grow, contribute, and work alongside innovative minds to develop solutions that solve meaningful problems. Whether you’re looking for a dedicated app developer, a UI/UX designer, or a full-stack problem solver — I’m ready to bring value to your next project.
-    </p>
+    <p>I’m Abdullah Talha — a Software Engineer and Full Stack Developer with experience in building high-quality, cross-platform apps using Flutter and Firebase. I blend clean UI/UX design with scalable code to solve real-world problems. I’m skilled in both design and development, and ready to contribute to innovative, fast-moving teams.</p>
+    <p>Whether you're seeking a mobile app developer, UI/UX designer, or full-stack problem solver — I bring the complete package with attention to detail and passion for digital craftsmanship.</p>
   </section>
 
   <section class="education" data-aos="fade-right">
     <h2>Education</h2>
     <ul>
-      <li><strong>BS Software Engineering</strong> (2021 – 2025)<br>Abbottabad University of Science and Technology</li>
-      <li><strong>FSc Pre-Medical</strong> (2016 – 2018)<br>Army Burn Hall College for Boys, Abbottabad</li>
-      <li><strong>Matriculation (Science)</strong> (2014 – 2016)<br>Army Burn Hall College for Boys, Abbottabad</li>
+      <li><strong>BS Software Engineering</strong> (2021–2025) — AUST</li>
+      <li><strong>FSc Pre-Medical</strong> (2016–2018) — Army Burn Hall College</li>
+      <li><strong>Matriculation (Science)</strong> (2014–2016) — Army Burn Hall College</li>
     </ul>
   </section>
 
   <section class="skills" data-aos="zoom-in">
     <h2>Skills</h2>
     <div class="skill-tags">
-      <span>Flutter</span>
-      <span>Firebase</span>
-      <span>Dart</span>
-      <span>Node.js</span>
-      <span>Office 365</span>
-      <span>Adobe Photoshop</span>
-      <span>UI/UX Design</span>
-      <span>Graphic Design</span>
-      <span>Responsive Web Design</span>
-      <span>Project Management</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Git & GitHub</span>
+      <span>Flutter</span><span>Firebase</span><span>Dart</span><span>Node.js</span>
+      <span>Office 365</span><span>Photoshop</span><span>UI/UX Design</span>
+      <span>Graphic Design</span><span>HTML</span><span>CSS</span><span>Git</span>
     </div>
   </section>
 
   <section class="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card" data-aos="fade-right">
+      <div class="project-card" data-aos="flip-left">
         <img src="assets/wanderwise.jpg" alt="WanderWise">
         <h3>WanderWise</h3>
-        <p>WanderWise is a travel planning mobile application developed in Flutter. It includes hotel and flight bookings, offline itinerary access, map integration, and budgeting tools. Users can explore, plan, and review their travel experiences — even without internet access.</p>
-        <p><strong>Tech Stack:</strong> Flutter, Firebase, Google Maps API</p>
+        <p>A Flutter-based travel app with flight/hotel booking, itinerary planner, offline access, and map integration. Built with Firebase & Google APIs.</p>
       </div>
-
-      <div class="project-card" data-aos="fade-left">
+      <div class="project-card" data-aos="flip-right">
         <img src="assets/soulverse.jpg" alt="SoulVerse">
         <h3>SoulVerse</h3>
-        <p>SoulVerse is an Islamic spiritual app focused on emotional healing through Quranic verses, hadith, and duas. It supports mood tracking, audio playback, bookmarking, and multilingual content (English, Urdu, Arabic), all wrapped in a clean, soothing interface.</p>
-        <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
+        <p>Islamic spiritual app for emotional healing. Features multilingual content (EN/UR/AR), mood tracker, audio playback, and beautiful UI/UX design.</p>
       </div>
     </div>
   </section>
@@ -98,24 +71,18 @@
   </section>
 
   <footer data-aos="fade-up">
-    <p>&copy; 2025 Abdullah Talha. Designed with ❤️ and Flutter vibes.</p>
+    <p>© 2025 Abdullah Talha. Designed with ❤️, Flutter & HTML5.</p>
   </footer>
 
-  <!-- AOS + Typing + Scroll JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
 
     new Typed("#typed", {
-      strings: [
-        "Flutter Developer",
-        "Full Stack Developer",
-        "UI/UX Designer",
-        "Graphic Designer",
-        "Problem Solver"
-      ],
-      typeSpeed: 50,
+      strings: ["Flutter Developer", "Full Stack Engineer", "UI/UX Designer", "Problem Solver"],
+      typeSpeed: 60,
       backSpeed: 30,
       loop: true
     });
