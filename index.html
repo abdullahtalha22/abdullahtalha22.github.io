@@ -5,26 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abdullah Talha | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Typing Animation -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.css">
 </head>
 <body>
 
-  <header class="hero">
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" title="Back to Top">⬆</a>
+
+  <header class="hero" data-aos="fade-down">
     <img src="assets/abdullah.jpg" alt="Abdullah Talha">
     <div class="hero-text">
       <h1>Abdullah Talha</h1>
-      <p class="subtitle">Flutter Developer | Full Stack Engineer | UI/UX & Graphic Designer</p>
+      <p class="typing subtitle">
+        <span id="typed"></span>
+      </p>
       <a href="Abdullah Resume.pdf" class="resume-btn" download>Download Resume</a>
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
-      I’m a passionate Full Stack Developer with expertise in cross-platform app development using Flutter and Firebase. I build modern, scalable, and user-centric mobile apps with a strong focus on responsive UI/UX design. I love solving real-world problems and thrive in dynamic environments where I can learn, contribute, and grow with innovative teams. I also bring skills in graphic design, Office 365, and backend integration to deliver full-stack solutions with polish and professionalism.
+      I’m Abdullah Talha — a Software Engineer and passionate Full Stack Developer specializing in cross-platform mobile app development using Flutter and Firebase. With a strong foundation in software engineering and user-centered design, I create responsive, scalable, and intuitive applications that provide real-world impact.
+    </p>
+    <p>
+      My development style blends modern technology with clean UI/UX principles. I’m particularly skilled in building multilingual apps, handling backend integration, and ensuring exceptional user experiences across Android and iOS platforms. My portfolio includes spiritual, productivity, and travel-based applications — all designed with accessibility and performance in mind.
+    </p>
+    <p>
+      In addition to development, I bring a creative edge through my experience in Adobe Photoshop and graphic design. I’m also well-versed in Office 365 tools, which supports my ability to manage documentation, reporting, and collaboration in team environments.
+    </p>
+    <p>
+      I’m always eager to grow, contribute, and work alongside innovative minds to develop solutions that solve meaningful problems. Whether you’re looking for a dedicated app developer, a UI/UX designer, or a full-stack problem solver — I’m ready to bring value to your next project.
     </p>
   </section>
 
-  <section class="education">
+  <section class="education" data-aos="fade-right">
     <h2>Education</h2>
     <ul>
       <li><strong>BS Software Engineering</strong> (2021 – 2025)<br>Abbottabad University of Science and Technology</li>
@@ -33,7 +51,7 @@
     </ul>
   </section>
 
-  <section class="skills">
+  <section class="skills" data-aos="zoom-in">
     <h2>Skills</h2>
     <div class="skill-tags">
       <span>Flutter</span>
@@ -52,17 +70,17 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section class="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card">
+      <div class="project-card" data-aos="fade-right">
         <img src="assets/wanderwise.jpg" alt="WanderWise">
         <h3>WanderWise</h3>
         <p>WanderWise is a travel planning mobile application developed in Flutter. It includes hotel and flight bookings, offline itinerary access, map integration, and budgeting tools. Users can explore, plan, and review their travel experiences — even without internet access.</p>
         <p><strong>Tech Stack:</strong> Flutter, Firebase, Google Maps API</p>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-aos="fade-left">
         <img src="assets/soulverse.jpg" alt="SoulVerse">
         <h3>SoulVerse</h3>
         <p>SoulVerse is an Islamic spiritual app focused on emotional healing through Quranic verses, hadith, and duas. It supports mood tracking, audio playback, bookmarking, and multilingual content (English, Urdu, Arabic), all wrapped in a clean, soothing interface.</p>
@@ -71,7 +89,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
     <p><strong>Phone:</strong> 0345-9625775</p>
@@ -79,9 +97,28 @@
     <p><strong>GitHub:</strong> <a href="https://github.com/abdullahtalha22" target="_blank">github.com/abdullahtalha22</a></p>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Abdullah Talha. Designed with ❤️ and Flutter vibes.</p>
   </footer>
 
+  <!-- AOS + Typing + Scroll JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    new Typed("#typed", {
+      strings: [
+        "Flutter Developer",
+        "Full Stack Developer",
+        "UI/UX Designer",
+        "Graphic Designer",
+        "Problem Solver"
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
 </body>
 </html>
