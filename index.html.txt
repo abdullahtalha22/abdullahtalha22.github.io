@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abdullah Talha | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="hero">
+    <img src="assets/abdullah.jpg" alt="Abdullah Talha">
+    <div class="hero-text">
+      <h1>Abdullah Talha</h1>
+      <p>Software Engineer | Flutter Developer | UI/UX & Graphic Designer | Full Stack Developer</p>
+      <a href="Abdullah Resume.pdf" class="resume-btn" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate full stack developer with hands-on experience in cross-platform mobile application development using Flutter. I enjoy solving real-world problems with code and strive to deliver user-friendly, scalable, and aesthetically pleasing digital solutions. With a background in UI/UX, I’m well-equipped to design responsive, intuitive interfaces. I'm eager to grow and contribute to innovative teams in the tech industry.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skill-tags">
+      <span>Flutter</span>
+      <span>Firebase</span>
+      <span>Dart</span>
+      <span>HTML & CSS</span>
+      <span>Office 365</span>
+      <span>Photoshop</span>
+      <span>UI/UX Design</span>
+      <span>Graphic Design</span>
+      <span>Project Management</span>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/wanderwise.jpg" alt="WanderWise">
+        <h3>WanderWise</h3>
+        <p>A travel planning app with hotel flight booking, map integration, itinerary planner, offline access, and reviews.</p>
+        <p><strong>Tech:</strong> Flutter, Firebase</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/soulverse.jpg" alt="SoulVerse">
+        <h3>SoulVerse</h3>
+        <p>An Islamic spiritual app for emotional support with multilingual content (EN, UR, AR), mood-based features, and audio playback.</p>
+        <p><strong>Tech:</strong> Flutter, Firebase</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> abdullah.talha22@gmail.com</p>
+    <p><strong>Phone:</strong> 0345-9625775</p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">linkedin.com/in/abdullahtalha22</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/abdullahtalha22" target="_blank">github.com/abdullahtalha22</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Abdullah Talha. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
