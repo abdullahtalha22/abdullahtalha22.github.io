@@ -2,74 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abdullah Talha | Full Stack Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <header class="navbar">
+    <ul>
+      <li><a href="#home" class="active">Online Portfolio</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-left">
-      <h1>Hi, I'm <span class="glow">Abdullah Talha</span></h1>
-      <p class="tagline">FULL STACK DEVELOPER</p>
-      <p class="intro-text">
-        I’m a passionate developer with expertise in Flutter, Firebase, UI/UX, and cross-platform app development.
-        I build fast, scalable, and beautiful digital products that solve real-world problems.
-      </p>
-      <a href="#projects" class="glow-button">View My Work</a>
+  <section id="home" class="home-section">
+    <div class="left-text">
+      <p class="greeting">Hello !!!</p>
+      <h1>I'm Abdullah Talha</h1>
+      <h2 class="role">FULL STACK DEVELOPER</h2>
+      <p class="intro">Flutter Developer | UI/UX Designer | Firebase | Backend Integration</p>
     </div>
-    <div class="hero-right">
+    <div class="right-image">
       <img src="assets/abdullah.jpg" alt="Abdullah Talha">
     </div>
   </section>
 
-  <!-- Sections (placeholders for now) -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I bring creative UI and reliable code together to develop stunning, scalable digital experiences. Skilled in Office 365, Adobe Photoshop, and full stack development.</p>
+    <p>
+      A motivated Software Engineering graduate passionate about full-stack development.
+      Experienced in cross-platform apps using Flutter and Firebase. Skilled in building scalable, responsive, and visually appealing applications.
+    </p>
   </section>
 
   <section id="education" class="section">
     <h2>Education</h2>
-    <ul>
-      <li><strong>BS Software Engineering</strong> – AUST (2021–2025)</li>
-      <li><strong>FSc Pre-Medical</strong> – Army Burn Hall College (2016–2018)</li>
-      <li><strong>Matric (Science)</strong> – Army Burn Hall College (2014–2016)</li>
-    </ul>
+    <p><strong>BS in Software Engineering</strong> – Abbottabad University of Science and Technology (2021 – 2025)</p>
+    <p><strong>F.Sc Pre-Medical</strong> – Army Burn Hall College (2016 – 2018)</p>
+    <p><strong>Matriculation (Science)</strong> – Army Burn Hall College (2014 – 2016)</p>
   </section>
 
   <section id="experience" class="section">
-    <h2>Experience</h2>
-    <p>Experienced in mobile app development with Flutter, Firebase integration, and graphic design using Adobe Photoshop. Comfortable with both front-end and back-end stacks.</p>
+    <h2>Experience & Skills</h2>
+    <ul>
+      <li>Cross-platform App Development</li>
+      <li>Flutter & Firebase Integration</li>
+      <li>UI/UX Design & Responsive Layouts</li>
+      <li>Project Management & Team Collaboration</li>
+    </ul>
   </section>
 
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/wanderwise.jpg" alt="WanderWise">
-        <h3>WanderWise</h3>
-        <p>Travel booking app with offline access, itinerary planner, and hotel/flight bookings.</p>
+    <h2>Selected Projects</h2>
+    <div class="project-gallery">
+      <div>
+        <img src="assets/soulverse.jpg" alt="SoulVerse App">
+        <p><strong>SoulVerse</strong> – Islamic spiritual app with mood-based content, multilingual support, audio playback, and bookmarks.</p>
       </div>
-      <div class="project-card">
-        <img src="assets/soulverse.jpg" alt="SoulVerse">
-        <h3>SoulVerse</h3>
-        <p>Islamic app with mood-based content, audio, and multi-language UI.</p>
+      <div>
+        <img src="assets/wanderwise.jpg" alt="WanderWise App">
+        <p><strong>WanderWise</strong> – Travel planning app with hotel/flight booking, offline access, budget planning, and maps.</p>
       </div>
     </div>
   </section>
@@ -77,12 +73,25 @@
   <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
-    <p>Phone: 0345-9625775</p>
-    <p><a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a> | <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a></p>
+    <p>Phone: +92-345-9625775</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">abdullahtalha22</a></p>
+    <p>Location: Abbottabad, Pakistan</p>
   </section>
 
   <footer>
     <p>© 2025 Abdullah Talha</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
