@@ -2,130 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdullah Talha | Full Stack Developer</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Background Gradient -->
-  <div class="background-gradient"></div>
-
   <!-- Navigation -->
   <header>
     <nav>
       <ul>
-        <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
-        <li><a href="#" class="nav-link" data-target="about">About</a></li>
-        <li><a href="#" class="nav-link" data-target="education">Education</a></li>
-        <li><a href="#" class="nav-link" data-target="experience">Experience</a></li>
-        <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
-        <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Slideshow Container -->
-  <main id="slideshow">
-
-    <!-- Slide: Home -->
-    <section id="home" class="slide visible">
-      <div class="hero">
-        <div class="hero-left">
-          <h1>Hi, I'm <span class="glow">Abdullah Talha</span></h1>
-          <p class="tagline">FULL STACK DEVELOPER</p>
-          <p class="intro-text">
-            I’m a passionate developer with expertise in Flutter, Firebase, UI/UX, and cross-platform app development.
-            I build fast, scalable, and beautiful digital products that solve real-world problems.
-          </p>
-          <a href="#" class="glow-button nav-link" data-target="projects">View My Work</a>
-        </div>
-        <div class="hero-right">
-          <img src="assets/abdullah.jpg" alt="Abdullah Talha" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide: About -->
-    <section id="about" class="slide hidden">
-      <h2>About Me</h2>
-      <p>I bring creative UI and reliable code together to develop stunning, scalable digital experiences. Skilled in Office 365, Adobe Photoshop, and full stack development.</p>
-    </section>
-
-    <!-- Slide: Education -->
-    <section id="education" class="slide hidden">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>BS Software Engineering</strong> – AUST (2021–2025)</li>
-        <li><strong>FSc Pre-Medical</strong> – Army Burn Hall College (2016–2018)</li>
-        <li><strong>Matric (Science)</strong> – Army Burn Hall College (2014–2016)</li>
-      </ul>
-    </section>
-
-    <!-- Slide: Experience -->
-    <section id="experience" class="slide hidden">
-      <h2>Experience</h2>
-      <p>Experienced in Flutter, Firebase, UI/UX design, and full-stack development with Office 365 and Adobe tools.</p>
-    </section>
-
-    <!-- Slide: Projects -->
-    <section id="projects" class="slide hidden">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="assets/wanderwise.jpg" alt="WanderWise" />
-          <h3>WanderWise</h3>
-          <p>Travel app with offline access, booking, and itinerary planner.</p>
-        </div>
-        <div class="project-card">
-          <img src="assets/soulverse.jpg" alt="SoulVerse" />
-          <h3>SoulVerse</h3>
-          <p>Islamic mood-based app with audio, multi-language support, and content curation.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide: Contact -->
-    <section id="contact" class="slide hidden">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
-      <p>Phone: 0345-9625775</p>
-      <p>
-        <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Hi, I'm <span class="glow">Abdullah Talha</span></h1>
+      <p class="tagline">FULL STACK DEVELOPER</p>
+      <p class="intro-text">
+        I’m a passionate developer with expertise in Flutter, Firebase, UI/UX, and cross-platform app development.
+        I build fast, scalable, and beautiful digital products that solve real-world problems.
       </p>
-    </section>
+      <a href="#projects" class="glow-button">View My Work</a>
+    </div>
+    <div class="hero-right">
+      <img src="assets/abdullah.jpg" alt="Abdullah Talha">
+    </div>
+  </section>
 
-  </main>
+  <!-- Sections (placeholders for now) -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I bring creative UI and reliable code together to develop stunning, scalable digital experiences. Skilled in Office 365, Adobe Photoshop, and full stack development.</p>
+  </section>
 
-  <!-- Footer -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BS Software Engineering</strong> – AUST (2021–2025)</li>
+      <li><strong>FSc Pre-Medical</strong> – Army Burn Hall College (2016–2018)</li>
+      <li><strong>Matric (Science)</strong> – Army Burn Hall College (2014–2016)</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <p>Experienced in mobile app development with Flutter, Firebase integration, and graphic design using Adobe Photoshop. Comfortable with both front-end and back-end stacks.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/wanderwise.jpg" alt="WanderWise">
+        <h3>WanderWise</h3>
+        <p>Travel booking app with offline access, itinerary planner, and hotel/flight bookings.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/soulverse.jpg" alt="SoulVerse">
+        <h3>SoulVerse</h3>
+        <p>Islamic app with mood-based content, audio, and multi-language UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
+    <p>Phone: 0345-9625775</p>
+    <p><a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a> | <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a></p>
+  </section>
+
   <footer>
     <p>© 2025 Abdullah Talha</p>
   </footer>
-
-  <!-- Slideshow JS -->
-  <script>
-    const links = document.querySelectorAll('.nav-link');
-    const slides = document.querySelectorAll('.slide');
-
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = this.getAttribute('data-target');
-
-        slides.forEach(slide => {
-          slide.classList.remove('visible');
-          slide.classList.add('hidden');
-        });
-
-        document.getElementById(target).classList.remove('hidden');
-        document.getElementById(target).classList.add('visible');
-
-        links.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-  </script>
 </body>
 </html>
