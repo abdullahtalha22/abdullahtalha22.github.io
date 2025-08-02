@@ -9,10 +9,10 @@
 </head>
 <body>
 
-  <!-- Background Gradient -->
+  <!-- Gradient Background -->
   <div class="background-gradient"></div>
 
-  <!-- Navigation -->
+  <!-- Header -->
   <header>
     <nav>
       <ul>
@@ -26,34 +26,35 @@
     </nav>
   </header>
 
-  <!-- Slideshow Container -->
+  <!-- Slides -->
   <main id="slideshow">
 
-    <!-- Slide: Home -->
+    <!-- Home Slide -->
     <section id="home" class="slide visible">
       <div class="hero">
         <div class="hero-left">
           <h1>Hi, I'm <span class="glow">Abdullah Talha</span></h1>
-          <p class="tagline">FULL STACK DEVELOPER</p>
+          <p class="tagline"><span id="typed-text"></span><span id="cursor">|</span></p>
           <p class="intro-text">
-            I’m a passionate developer with expertise in Flutter, Firebase, UI/UX, and cross-platform app development.
-            I build fast, scalable, and beautiful digital products that solve real-world problems.
+            I’m a passionate full stack developer with hands-on experience in cross-platform mobile application development using Flutter, Firebase, and backend tools. I love solving real-world problems with clean, scalable, and user-friendly solutions.
           </p>
-          <a href="#" class="glow-button nav-link" data-target="projects">View My Work</a>
         </div>
         <div class="hero-right">
           <img src="assets/abdullah.jpg" alt="Abdullah Talha" />
+          <a href="#" class="glow-button nav-link" data-target="projects">View My Work</a>
         </div>
       </div>
     </section>
 
-    <!-- Slide: About -->
+    <!-- About Slide -->
     <section id="about" class="slide hidden">
       <h2>About Me</h2>
-      <p>I bring creative UI and reliable code together to develop stunning, scalable digital experiences. Skilled in Office 365, Adobe Photoshop, and full stack development.</p>
+      <p>
+        I'm a passionate full stack developer with hands-on experience in cross-platform mobile application development using Flutter. I enjoy solving real-world problems with code and strive to deliver user-friendly, scalable, and aesthetically pleasing digital solutions. With a background in UI/UX design, I’m well-equipped to design responsive, intuitive interfaces. I also have a strong command of Office 365 tools and Adobe Photoshop, enabling me to work efficiently on both development and design fronts. I'm eager to grow and contribute to innovative tech teams worldwide.
+      </p>
     </section>
 
-    <!-- Slide: Education -->
+    <!-- Education Slide -->
     <section id="education" class="slide hidden">
       <h2>Education</h2>
       <ul>
@@ -63,35 +64,38 @@
       </ul>
     </section>
 
-    <!-- Slide: Experience -->
+    <!-- Experience Slide -->
     <section id="experience" class="slide hidden">
       <h2>Experience</h2>
-      <p>Experienced in Flutter, Firebase, UI/UX design, and full-stack development with Office 365 and Adobe tools.</p>
+      <p>
+        I have developed and deployed several cross-platform mobile applications using Flutter and Firebase, with clean UI/UX and real-time backend integration. I’ve contributed to full-stack systems, built responsive UIs, created admin dashboards, and managed data using Firebase Firestore. I’ve also worked with REST APIs, authentication, multilingual apps, and cloud integration. My design skills in Adobe Photoshop and layout experience in UI tools help me deliver complete, polished products from design to deployment.
+      </p>
     </section>
 
-    <!-- Slide: Projects -->
+    <!-- Projects Slide -->
     <section id="projects" class="slide hidden">
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
           <img src="assets/wanderwise.jpg" alt="WanderWise" />
           <h3>WanderWise</h3>
-          <p>Travel app with offline access, booking, and itinerary planner.</p>
+          <p>Travel booking app with offline access, itinerary planner, hotel/flight booking, and location services.</p>
         </div>
         <div class="project-card">
           <img src="assets/soulverse.jpg" alt="SoulVerse" />
           <h3>SoulVerse</h3>
-          <p>Islamic mood-based app with audio, multi-language support, and content curation.</p>
+          <p>Islamic mood-based spiritual app with audio content, Quranic verses, Duas, and multi-language UI support.</p>
         </div>
       </div>
     </section>
 
-    <!-- Slide: Contact -->
+    <!-- Contact Slide -->
     <section id="contact" class="slide hidden">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
-      <p>Phone: 0345-9625775</p>
+      <p><strong>Email:</strong> <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></p>
+      <p><strong>Phone:</strong> 0345-9625775</p>
       <p>
+        <strong>Links:</strong>
         <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a> |
         <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a>
       </p>
@@ -104,7 +108,7 @@
     <p>© 2025 Abdullah Talha</p>
   </footer>
 
-  <!-- Slideshow JS -->
+  <!-- JavaScript: Slide Navigation -->
   <script>
     const links = document.querySelectorAll('.nav-link');
     const slides = document.querySelectorAll('.slide');
@@ -126,6 +130,42 @@
         this.classList.add('active');
       });
     });
+
+    // Typing effect
+    const roles = [
+      "Software Engineering",
+      "Flutter Developer",
+      "Cross-Platform App Builder",
+      "UI/UX & Graphic Designer",
+      "Full Stack Developer",
+      "Web Developer"
+    ];
+
+    let current = 0;
+    let char = 0;
+    const typedText = document.getElementById("typed-text");
+    const cursor = document.getElementById("cursor");
+
+    function type() {
+      if (char < roles[current].length) {
+        typedText.textContent += roles[current][char++];
+        setTimeout(type, 80);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
+
+    function erase() {
+      if (char > 0) {
+        typedText.textContent = roles[current].substring(0, --char);
+        setTimeout(erase, 40);
+      } else {
+        current = (current + 1) % roles.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    type();
   </script>
 </body>
 </html>
