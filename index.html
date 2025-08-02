@@ -13,108 +13,91 @@
   <!-- Gradient Background -->
   <div class="background-gradient"></div>
 
-  <!-- Navigation -->
+  <!-- Header -->
   <header>
     <nav>
       <ul>
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-target="about">About</a></li>
+        <li><a href="#" class="nav-link" data-target="education">Education</a></li>
+        <li><a href="#" class="nav-link" data-target="experience">Experience</a></li>
+        <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+        <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <!-- Slides -->
+  <main id="slideshow">
 
-    <!-- About Me -->
-    <section id="about" class="section glass">
+    <!-- Home Slide -->
+    <section id="home" class="slide visible">
+      <div class="hero">
+        <div class="hero-left">
+          <h1>Hi, I’m <span class="glow">Abdullah Talha</span></h1>
+          <p class="tagline"><span id="typed-text"></span><span id="cursor">|</span></p>
+          <p class="intro-text">
+            I’m a passionate full-stack developer with hands-on experience in cross-platform mobile apps (Flutter & Firebase) and responsive web solutions. I build fast, scalable, and user-friendly products that solve real-world problems.
+          </p>
+        </div>
+        <div class="hero-right">
+          <img src="assets/abdullah.jpg" alt="Abdullah Talha" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Slide -->
+    <section id="about" class="slide hidden">
       <h2><i class="fas fa-user"></i> About Me</h2>
-      <p>
-        I’m <strong>Abdullah Talha</strong>, a passionate and creative Full Stack Developer with a solid foundation in Software Engineering. My expertise lies in developing cross-platform mobile applications using Flutter, integrating Firebase for real-time data handling, and designing modern UI/UX interfaces that feel intuitive and fluid.
-      </p>
-      <p>
-        Beyond development, I’m skilled in graphic design tools like Adobe Photoshop and Office 365, enabling me to deliver visually compelling and functional digital experiences. I thrive on solving complex problems and collaborating with innovative teams to build products that make a real-world impact.
+      <p class="about-text">
+        With a B.S. in Software Engineering (AUST ’25), I specialize in crafting cross-platform mobile experiences using Flutter and Firebase. My UI/UX background (Adobe Photoshop & Figma) ensures every app is not only functional but intuitive, accessible, and visually engaging.
       </p>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="section glass">
+    <!-- Education Slide -->
+    <section id="education" class="slide hidden">
       <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <div class="timeline">
-        <div class="entry">
-          <div class="date">2021 – 2025</div>
-          <div class="detail">
-            <h3>BS Software Engineering</h3>
-            <p>Abbottabad University of Science and Technology</p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="date">2016 – 2018</div>
-          <div class="detail">
-            <h3>FSc Pre-Medical</h3>
-            <p>Army Burn Hall College for Boys</p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="date">2014 – 2016</div>
-          <div class="detail">
-            <h3>Matriculation (Science)</h3>
-            <p>Army Burn Hall College for Boys</p>
-          </div>
-        </div>
-      </div>
+      <ul class="education-list">
+        <li><strong>BS Software Engineering</strong> — AUST (2021–2025)</li>
+        <li><strong>FSc Pre-Medical</strong> — Army Burn Hall College (2016–2018)</li>
+        <li><strong>Matric (Science)</strong> — Army Burn Hall College (2014–2016)</li>
+      </ul>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section glass">
+    <!-- Experience Slide -->
+    <section id="experience" class="slide hidden">
       <h2><i class="fas fa-briefcase"></i> Experience</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Mobile App Developer</h3>
-          <span class="period">2023 – Present</span>
-          <ul>
-            <li>Built and maintained 5+ Flutter apps with Firebase backend.</li>
-            <li>Implemented real-time sync, offline caching, and CI/CD.</li>
-            <li>Designed UI/UX flows and optimized performance.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Full Stack Engineer Intern</h3>
-          <span class="period">2022 – 2023</span>
-          <ul>
-            <li>Developed REST APIs with Node.js and integrated Firestore.</li>
-            <li>Collaborated on React web dashboards and admin panels.</li>
-            <li>Wrote unit tests, documentation, and improved code coverage.</li>
-          </ul>
-        </div>
-      </div>
+      <p class="experience-text">
+        • Developed 6+ Flutter apps with real-time Firebase integration (authentication, Firestore, Cloud Functions).<br>
+        • Built responsive web dashboards using React and Node.js, integrating RESTful APIs and OAuth flows.<br>
+        • Led UI/UX redesigns, improving user engagement by 30%.<br>
+        • Managed CI/CD pipelines, unit tests (Mockito), and code reviews in GitHub.
+      </p>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section glass">
+    <!-- Projects Slide -->
+    <section id="projects" class="slide hidden">
       <h2><i class="fas fa-code"></i> Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="assets/wanderwise.jpg" alt="WanderWise">
+          <img src="assets/wanderwise.jpg" alt="WanderWise" />
           <h3>WanderWise</h3>
-          <p>Flutter travel app with hotel/flight booking, itinerary planner, offline mode, and Google Maps integration.</p>
+          <p>Travel app: hotel/flight booking, offline itineraries, budgeting tools & Google Maps. Tech: Flutter, Firebase, Maps SDK.</p>
         </div>
         <div class="project-card">
-          <img src="assets/soulverse.jpg" alt="SoulVerse">
+          <img src="assets/soulverse.jpg" alt="SoulVerse" />
           <h3>SoulVerse</h3>
-          <p>Islamic spiritual app featuring mood-based Quranic verses, audio playback, bookmarks, and multilingual support.</p>
+          <p>Spiritual wellness app: mood-based Quranic content, audio playback, bookmarking & multi-language support.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section glass">
+    <!-- Contact Slide -->
+    <section id="contact" class="slide hidden">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
       <div class="contact-grid">
         <div><i class="fas fa-envelope-open-text"></i> <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></div>
-        <div><i class="fas fa-phone-alt"></i> 0345-9625775</div>
+        <div><i class="fas fa-phone-alt"></i> +92-345-9625775</div>
         <div><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a></div>
         <div><i class="fab fa-github"></i> <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a></div>
       </div>
@@ -127,5 +110,25 @@
     <p>© 2025 Abdullah Talha</p>
   </footer>
 
+  <!-- JS: slide nav + typing -->
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+    const slides = document.querySelectorAll('.slide');
+    links.forEach(l => l.addEventListener('click', e => {
+      e.preventDefault();
+      let t = l.getAttribute('data-target');
+      slides.forEach(s => {
+        s.classList.toggle('visible', s.id===t);
+        s.classList.toggle('hidden', s.id!==t);
+      });
+      links.forEach(n=>n.classList.toggle('active', n===l));
+    }));
+    // typing
+    const roles=["Software Engineering","Flutter Developer","Cross-Platform App Builder","UI/UX & Graphic Designer","Full Stack Developer","Web Developer"];
+    let cur=0, ch=0; const txt=document.getElementById("typed-text"), cr=document.getElementById("cursor");
+    function type(){ if(ch<roles[cur].length) { txt.textContent+=roles[cur][ch++]; setTimeout(type,80);} else setTimeout(erase,1500);}
+    function erase(){ if(ch>0){ txt.textContent=roles[cur].substr(0,--ch); setTimeout(erase,40);} else{cur=(cur+1)%roles.length; setTimeout(type,500);} }
+    type();
+  </script>
 </body>
 </html>
