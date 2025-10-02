@@ -1,150 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abdullah Talha | Full Stack Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdullah Talha — Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta for theme color -->
+  <meta name="theme-color" content="#0f0c29">
 </head>
 <body>
 
-  <!-- Gradient Background -->
-  <div class="background-gradient"></div>
+  <!-- full-screen animated gradient + blobs + grain -->
+  <div class="bg-wrap" aria-hidden="true">
+    <div class="gradient-core"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </div>
 
-  <!-- Header -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
-        <li><a href="#" class="nav-link" data-target="about">About</a></li>
-        <li><a href="#" class="nav-link" data-target="education">Education</a></li>
-        <li><a href="#" class="nav-link" data-target="experience">Experience</a></li>
-        <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
-        <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+  <!-- top navigation (desktop + mobile) -->
+  <header class="site-header" role="banner">
+    <nav class="nav">
+      <ul class="nav-list" role="menubar" aria-label="Main navigation">
+        <li><button class="nav-btn active" data-target="home" role="menuitem">Home</button></li>
+        <li><button class="nav-btn" data-target="about" role="menuitem">About</button></li>
+        <li><button class="nav-btn" data-target="education" role="menuitem">Education</button></li>
+        <li><button class="nav-btn" data-target="experience" role="menuitem">Experience</button></li>
+        <li><button class="nav-btn" data-target="projects" role="menuitem">Projects</button></li>
+        <li><button class="nav-btn" data-target="contact" role="menuitem">Contact</button></li>
       </ul>
+
+      <!-- subtle slider indicator like example -->
+      <div class="nav-indicator" aria-hidden="true"></div>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main id="slideshow">
+  <!-- single-page slides container (no scroll) -->
+  <main class="slides" id="slides" role="main">
 
-    <!-- Home -->
-    <section id="home" class="slide visible">
-      <div class="hero">
+    <!-- HOME -->
+    <section id="home" class="slide active" aria-labelledby="home-title">
+      <div class="container hero">
         <div class="hero-left">
-          <p class="tagline">Hello 👋 I’m</p>
-          <h1><span class="glow">Abdullah Talha</span></h1>
-          <p class="role"><span id="typed-text"></span><span id="cursor">|</span></p>
-          <p class="intro-text">
-            I’m a passionate Full-Stack Developer skilled in Flutter, Firebase, and modern web technologies. I build fast, scalable, and user-friendly products that solve real-world problems.
+          <p class="micro">ONLINE PORTFOLIO</p>
+          <h1 id="home-title" class="name">
+            <span class="hello">Hello —</span>
+            <span class="big">Abdullah <strong class="accent">Talha</strong></span>
+          </h1>
+
+          <div class="role-pill" aria-hidden="true">PROFESSIONAL CONTENT CREATOR</div>
+
+          <p class="desc">
+            <span id="typed-text"></span><span id="cursor">|</span>
           </p>
+
+          <p class="lead">
+            I build fast, modern cross-platform apps and elegant web experiences. Skilled in Flutter, Firebase, React, and polished UI/UX.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact" data-target="contact">
+              <!-- icon: paper-plane -->
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z" fill="currentColor"/></svg>
+              Hire Me
+            </a>
+            <a class="btn btn-ghost" href="assets/Abdullah_Talha_Resume.pdf" target="_blank" rel="noopener">
+              <!-- icon: download -->
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M21 21H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              Resume
+            </a>
+          </div>
         </div>
+
         <div class="hero-right">
-          <img src="assets/abdullah.jpg" alt="Abdullah Talha" />
+          <div class="portrait-frame">
+            <img src="assets/abdullah.jpg" alt="Abdullah Talha portrait" />
+            <div class="portrait-ring"></div>
+            <div class="portrait-glow"></div>
+          </div>
+          <div class="portfolio-tag">PORTFOLIO <span>2025</span></div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="slide hidden">
-      <h2><i class="fas fa-user"></i> About Me</h2>
-      <p class="about-text">
-        With a B.S. in Software Engineering (AUST ’25), I specialize in crafting cross-platform mobile apps using Flutter and Firebase. My UI/UX design experience with Figma and Photoshop ensures every product is intuitive and visually engaging.
-      </p>
+    <!-- ABOUT -->
+    <section id="about" class="slide" aria-labelledby="about-title">
+      <div class="container card">
+        <h2 id="about-title">
+          <!-- icon: person -->
+          <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3" fill="currentColor"/><path d="M4 20a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          About Me
+        </h2>
+        <p class="card-body">
+          I hold a B.S. in Software Engineering (AUST ’25). I specialize in cross-platform mobile development (Flutter & Firebase), and create responsive web apps with attention to UI/UX using Figma & Photoshop. I deliver clean, testable code and delightful user experiences.
+        </p>
+      </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="slide hidden">
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <ul class="education-list">
-        <li><strong>BS Software Engineering</strong> — AUST (2021–2025)</li>
-        <li><strong>FSc Pre-Medical</strong> — Army Burn Hall College (2016–2018)</li>
-        <li><strong>Matric (Science)</strong> — Army Burn Hall College (2014–2016)</li>
-      </ul>
+    <!-- EDUCATION -->
+    <section id="education" class="slide" aria-labelledby="edu-title">
+      <div class="container card">
+        <h2 id="edu-title">
+          <!-- icon: book -->
+          <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h15v13H3z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M18 6v13" stroke="currentColor" stroke-width="1.2" /></svg>
+          Education
+        </h2>
+        <ul class="edu-list">
+          <li><strong>BS Software Engineering</strong> — AUST (2021–2025)</li>
+          <li><strong>FSc Pre-Medical</strong> — Army Burn Hall College (2016–2018)</li>
+          <li><strong>Matric (Science)</strong> — Army Burn Hall College (2014–2016)</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="slide hidden">
-      <h2><i class="fas fa-briefcase"></i> Experience</h2>
-      <p class="experience-text">
-        • Developed 6+ Flutter apps with Firebase integration.<br>
-        • Built responsive dashboards using React + Node.js.<br>
-        • Led UI/UX redesigns, boosting engagement by 30%.<br>
-        • Managed CI/CD pipelines & code reviews.
-      </p>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="slide hidden">
-      <h2><i class="fas fa-code"></i> Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="assets/wanderwise.jpg" alt="WanderWise" />
-          <h3>Travel App</h3>
-          <p>Hotel/flight booking, offline itineraries, budgeting tools & Google Maps. Built with Flutter & Firebase.</p>
-        </div>
-        <div class="project-card">
-          <img src="assets/soulverse.jpg" alt="SoulVerse" />
-          <h3>SoulVerse</h3>
-          <p>Spiritual wellness app: mood-based Quranic content, audio playback, bookmarking & multi-language support.</p>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="slide" aria-labelledby="exp-title">
+      <div class="container card">
+        <h2 id="exp-title">
+          <!-- icon: briefcase -->
+          <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 7V5h8v2" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          Experience
+        </h2>
+        <div class="bullets">
+          <p>• Built 6+ Flutter apps with real-time Firebase features (Auth, Firestore, Cloud Functions).</p>
+          <p>• Developed responsive React dashboards and RESTful APIs with Node.js.</p>
+          <p>• Led UI/UX improvements that raised engagement 30% and handled CI/CD & testing.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="slide hidden">
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <div class="contact-grid">
-        <div><i class="fas fa-envelope-open-text"></i> <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a></div>
-        <div><i class="fas fa-phone-alt"></i> +92-345-9625775</div>
-        <div><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/abdullahtalha22" target="_blank">LinkedIn</a></div>
-        <div><i class="fab fa-github"></i> <a href="https://github.com/abdullahtalha22" target="_blank">GitHub</a></div>
+    <!-- PROJECTS -->
+    <section id="projects" class="slide" aria-labelledby="proj-title">
+      <div class="container">
+        <h2 id="proj-title" class="section-title">
+          <!-- icon: code -->
+          <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6L2 12l6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          Projects
+        </h2>
+        <div class="projects-grid">
+          <article class="project">
+            <img src="assets/wanderwise.jpg" alt="WanderWise screenshot" />
+            <div class="project-info">
+              <h3>WanderWise</h3>
+              <p>Travel app with booking, offline itineraries, budgeting tools and map integration. Built with Flutter & Firebase.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="assets/soulverse.jpg" alt="SoulVerse screenshot" />
+            <div class="project-info">
+              <h3>SoulVerse</h3>
+              <p>Spiritual wellness app with mood-based content, audio playback and multi-language support.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="slide" aria-labelledby="ct-title">
+      <div class="container card contact">
+        <h2 id="ct-title">
+          <!-- icon: mail -->
+          <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          Contact
+        </h2>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <svg class="ct-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <a href="mailto:abdullah.talha22@gmail.com">abdullah.talha22@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <svg class="ct-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7a10 10 0 0 0 20 0" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <span>+92 345 9625775</span>
+          </div>
+
+          <div class="contact-item">
+            <svg class="ct-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 0 8" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <a href="https://linkedin.com/in/abdullahtalha22" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <div class="contact-item">
+            <svg class="ct-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3 19.5c.5.1.7-.2.7-.5v-1.8c-3 .6-3.6-1.4-3.6-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 1.6-.8.9-1.5 2.5-1.1 3-.8.1-.6.4-1.1.7-1.4-2.4-.2-4.9-1.2-4.9-5.3 0-1.2.4-2.2 1.1-3-.1-.2-.5-1.2.1-2.5 0 0 .9-.3 3 1.1a10 10 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.3.2 2.3.1 2.5.7.8 1.1 1.8 1.1 3 0 4.1-2.6 5.1-5 5.3.4.4.7 1 .7 2.2v3.2c0 .3.2.6.8.5A10 10 0 0 0 12 2z" fill="currentColor"/></svg>
+            <a href="https://github.com/abdullahtalha22" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="contact-cta">
+          <a class="btn-large" href="mailto:abdullah.talha22@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2z" fill="currentColor"/></svg>
+            Send a message
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Abdullah Talha</p>
+  <footer class="site-footer" role="contentinfo">
+    <div>© <span id="year"></span> Abdullah Talha</div>
   </footer>
 
-  <!-- JS: Slide Navigation + Typing Effect -->
+  <!-- Scripts: slide nav, typing, keyboard & swipe support -->
   <script>
-    const links = document.querySelectorAll('.nav-link');
-    const slides = document.querySelectorAll('.slide');
-    links.forEach(l => l.addEventListener('click', e => {
-      e.preventDefault();
-      let t = l.getAttribute('data-target');
-      slides.forEach(s => {
-        s.classList.toggle('visible', s.id === t);
-        s.classList.toggle('hidden', s.id !== t);
-      });
-      links.forEach(n => n.classList.toggle('active', n === l));
-    }));
+    // utilities
+    const qs = s => document.querySelector(s);
+    const qsa = s => Array.from(document.querySelectorAll(s));
 
-    // Typing effect
-    const roles=["Full Stack Developer","Flutter Developer","Cross-Platform App Builder","UI/UX Designer","Web Developer"];
-    let cur=0, ch=0; 
-    const txt=document.getElementById("typed-text"), cr=document.getElementById("cursor");
-    function type(){ 
-      if(ch<roles[cur].length) { 
-        txt.textContent+=roles[cur][ch++]; 
-        setTimeout(type,80);
-      } else setTimeout(erase,1500);
-    }
-    function erase(){ 
-      if(ch>0){ 
-        txt.textContent=roles[cur].substr(0,--ch); 
-        setTimeout(erase,40);
-      } else {
-        cur=(cur+1)%roles.length; 
-        setTimeout(type,500);
+    // slide navigation behavior (no scroll)
+    (function() {
+      const navBtns = qsa('.nav-btn');
+      const slides = qsa('.slide');
+      const indicator = qs('.nav-indicator');
+      const setActive = (id) => {
+        slides.forEach(s => s.classList.toggle('active', s.id === id));
+        navBtns.forEach(b => b.classList.toggle('active', b.dataset.target === id));
+        // move indicator under active button
+        const activeBtn = navBtns.find(b => b.dataset.target === id);
+        if (activeBtn) {
+          const rect = activeBtn.getBoundingClientRect();
+          const parentRect = activeBtn.parentElement.getBoundingClientRect();
+          indicator.style.transform = \`translateX(\${rect.left - parentRect.left}px)\`;
+          indicator.style.width = rect.width + 'px';
+        }
+      };
+
+      navBtns.forEach(b => {
+        b.addEventListener('click', (e) => {
+          const target = b.dataset.target;
+          setActive(target);
+        });
+      });
+
+      // keyboard (left/right)
+      let idx = 0;
+      const ids = slides.map(s => s.id);
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') idx = (idx + 1) % ids.length;
+        if (e.key === 'ArrowLeft') idx = (idx - 1 + ids.length) % ids.length;
+        setActive(ids[idx]);
+      });
+
+      // swipe support (mobile)
+      let startX = null;
+      const main = qs('#slides');
+      main.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+      main.addEventListener('touchend', e => {
+        if (startX === null) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+          idx = diff > 0 ? (idx + 1) % ids.length : (idx - 1 + ids.length) % ids.length;
+          setActive(ids[idx]);
+        }
+        startX = null;
+      });
+
+      // init indicator after layout
+      window.addEventListener('load', () => {
+        idx = ids.indexOf(qs('.slide.active').id);
+        setActive(ids[idx]);
+      });
+      window.addEventListener('resize', () => setActive(qs('.slide.active').id));
+    })();
+
+    // typing effect (polished)
+    (function() {
+      const roles = ["Full Stack Developer", "Flutter & Firebase", "UI/UX Enthusiast", "Cross-Platform Apps", "Web Developer"];
+      let r = 0, ch = 0, deleting = false;
+      const el = document.getElementById('typed-text');
+      const cursor = document.getElementById('cursor');
+
+      function tick() {
+        const text = roles[r];
+        if (!deleting) {
+          el.textContent = text.slice(0, ch + 1);
+          ch++;
+          if (ch === text.length) { deleting = true; setTimeout(tick, 1400); return; }
+        } else {
+          el.textContent = text.slice(0, ch - 1);
+          ch--;
+          if (ch === 0) { deleting = false; r = (r + 1) % roles.length; setTimeout(tick, 400); return; }
+        }
+        setTimeout(tick, deleting ? 45 : 90);
       }
-    }
-    type();
+      if (el) tick();
+
+      // respect user reduced motion preference
+      const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mq.matches) { cursor.style.display = 'none'; }
+    })();
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
