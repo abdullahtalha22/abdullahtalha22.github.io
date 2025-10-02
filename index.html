@@ -27,17 +27,18 @@
     </nav>
   </header>
 
-  <!-- Slides -->
+  <!-- Main Content -->
   <main id="slideshow">
 
-    <!-- Home Slide -->
+    <!-- Home -->
     <section id="home" class="slide visible">
       <div class="hero">
         <div class="hero-left">
-          <h1>Hi, I’m <span class="glow">Abdullah Talha</span></h1>
-          <p class="tagline"><span id="typed-text"></span><span id="cursor">|</span></p>
+          <p class="tagline">Hello 👋 I’m</p>
+          <h1><span class="glow">Abdullah Talha</span></h1>
+          <p class="role"><span id="typed-text"></span><span id="cursor">|</span></p>
           <p class="intro-text">
-            I’m a passionate full-stack developer with hands-on experience in cross-platform mobile apps (Flutter & Firebase) and responsive web solutions. I build fast, scalable, and user-friendly products that solve real-world problems.
+            I’m a passionate Full-Stack Developer skilled in Flutter, Firebase, and modern web technologies. I build fast, scalable, and user-friendly products that solve real-world problems.
           </p>
         </div>
         <div class="hero-right">
@@ -46,15 +47,15 @@
       </div>
     </section>
 
-    <!-- About Slide -->
+    <!-- About -->
     <section id="about" class="slide hidden">
       <h2><i class="fas fa-user"></i> About Me</h2>
       <p class="about-text">
-        With a B.S. in Software Engineering (AUST ’25), I specialize in crafting cross-platform mobile experiences using Flutter and Firebase. My UI/UX background (Adobe Photoshop & Figma) ensures every app is not only functional but intuitive, accessible, and visually engaging.
+        With a B.S. in Software Engineering (AUST ’25), I specialize in crafting cross-platform mobile apps using Flutter and Firebase. My UI/UX design experience with Figma and Photoshop ensures every product is intuitive and visually engaging.
       </p>
     </section>
 
-    <!-- Education Slide -->
+    <!-- Education -->
     <section id="education" class="slide hidden">
       <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <ul class="education-list">
@@ -64,25 +65,25 @@
       </ul>
     </section>
 
-    <!-- Experience Slide -->
+    <!-- Experience -->
     <section id="experience" class="slide hidden">
       <h2><i class="fas fa-briefcase"></i> Experience</h2>
       <p class="experience-text">
-        • Developed 6+ Flutter apps with real-time Firebase integration (authentication, Firestore, Cloud Functions).<br>
-        • Built responsive web dashboards using React and Node.js, integrating RESTful APIs and OAuth flows.<br>
-        • Led UI/UX redesigns, improving user engagement by 30%.<br>
-        • Managed CI/CD pipelines, unit tests (Mockito), and code reviews in GitHub.
+        • Developed 6+ Flutter apps with Firebase integration.<br>
+        • Built responsive dashboards using React + Node.js.<br>
+        • Led UI/UX redesigns, boosting engagement by 30%.<br>
+        • Managed CI/CD pipelines & code reviews.
       </p>
     </section>
 
-    <!-- Projects Slide -->
+    <!-- Projects -->
     <section id="projects" class="slide hidden">
       <h2><i class="fas fa-code"></i> Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
           <img src="assets/wanderwise.jpg" alt="WanderWise" />
-          <h3>Travel app</h3>
-          <p>Travel app: hotel/flight booking, offline itineraries, budgeting tools & Google Maps. Tech: Flutter, Firebase, Maps SDK.</p>
+          <h3>Travel App</h3>
+          <p>Hotel/flight booking, offline itineraries, budgeting tools & Google Maps. Built with Flutter & Firebase.</p>
         </div>
         <div class="project-card">
           <img src="assets/soulverse.jpg" alt="SoulVerse" />
@@ -92,7 +93,7 @@
       </div>
     </section>
 
-    <!-- Contact Slide -->
+    <!-- Contact -->
     <section id="contact" class="slide hidden">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
       <div class="contact-grid">
@@ -110,7 +111,7 @@
     <p>© 2025 Abdullah Talha</p>
   </footer>
 
-  <!-- JS: slide nav + typing -->
+  <!-- JS: Slide Navigation + Typing Effect -->
   <script>
     const links = document.querySelectorAll('.nav-link');
     const slides = document.querySelectorAll('.slide');
@@ -118,18 +119,32 @@
       e.preventDefault();
       let t = l.getAttribute('data-target');
       slides.forEach(s => {
-        s.classList.toggle('visible', s.id===t);
-        s.classList.toggle('hidden', s.id!==t);
+        s.classList.toggle('visible', s.id === t);
+        s.classList.toggle('hidden', s.id !== t);
       });
-      links.forEach(n=>n.classList.toggle('active', n===l));
+      links.forEach(n => n.classList.toggle('active', n === l));
     }));
-    // typing
-    const roles=["Software Engineering","Flutter Developer","Cross-Platform App Builder","UI/UX & Graphic Designer","Full Stack Developer","Web Developer"];
-    let cur=0, ch=0; const txt=document.getElementById("typed-text"), cr=document.getElementById("cursor");
-    function type(){ if(ch<roles[cur].length) { txt.textContent+=roles[cur][ch++]; setTimeout(type,80);} else setTimeout(erase,1500);}
-    function erase(){ if(ch>0){ txt.textContent=roles[cur].substr(0,--ch); setTimeout(erase,40);} else{cur=(cur+1)%roles.length; setTimeout(type,500);} }
+
+    // Typing effect
+    const roles=["Full Stack Developer","Flutter Developer","Cross-Platform App Builder","UI/UX Designer","Web Developer"];
+    let cur=0, ch=0; 
+    const txt=document.getElementById("typed-text"), cr=document.getElementById("cursor");
+    function type(){ 
+      if(ch<roles[cur].length) { 
+        txt.textContent+=roles[cur][ch++]; 
+        setTimeout(type,80);
+      } else setTimeout(erase,1500);
+    }
+    function erase(){ 
+      if(ch>0){ 
+        txt.textContent=roles[cur].substr(0,--ch); 
+        setTimeout(erase,40);
+      } else {
+        cur=(cur+1)%roles.length; 
+        setTimeout(type,500);
+      }
+    }
     type();
   </script>
 </body>
 </html>
-
